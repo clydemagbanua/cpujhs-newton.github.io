@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- Site by Clyde Magbanua -->
+    <!-- Co-created by Cezar Frange -->
+    <!-- For enquiries or concerns, email hello@clydemagbanua.co -->
+    <!-- Date Published: XXXX.XX.XX -->
     <title>NEWTON Website Collection</title>
   </head>
+  <style>
+      :root {
+            --th-primary: #f5bd1e;
+            --th-secondary: #555;
+            --th-dark: #414141;
+            --th-background: #fff;
+            --th-color: #000;
+      }
+      * {
+            margin: 0;
+            padding: 0;
+            transition: all .25s ease;
+      }
+      body {
+            background-color: var(--th-background);
+            color: var(--th-color);
+            font-family: sans-serif;
+      }
+      /* Object Styling */
+      a {
+            color: inherit;
+            padding: 10px 2.5px;
+            position: relative;
+            text-decoration: none;
+      }
+      a::after {
+            background: var(--th-primary);
+            bottom: 0;
+            content: "";
+            height: 1px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            transition: all .25s ease;
+      }
+      /* Header Styling */
+      .header-wrapper {
+            align-items: center;
+            border-bottom: 1px solid var(--th-dark);
+            display: flex;
+            flex-direction: row;
+            height: 6.25rem;
+            justify-content: space-between;
+            padding: 0 2rem;
+      }
+      header a::after {
+            height: 0px;
+      }
+      header a:hover:after {
+            height: 5px;
+      }
+      .ui-nav ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+      }
+      .ui-nav ul li {
+            list-style: none;
+            padding: 0 2rem;
+      }
+      .ui-nav ul li:first-child {
+            padding-left: 0;
+      }
+      .ui-nav ul li:last-child {
+            padding-right: 0;
+      }
+  </style>
   <body>
-    <p>Hello World!</p>
+    <header>
+        <div class="header-wrapper">
+            <h1>NEWTON</h1>
+            <nav class="ui-nav">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Students</a>
+                    </li>
+                    <li>
+                        <a href="#">Gallery</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
   </body>
 </html>
