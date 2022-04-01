@@ -10,12 +10,18 @@
     <title>NEWTON Website Collection</title>
   </head>
   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
       :root {
             --th-primary: #f5bd1e;
             --th-secondary: #555;
             --th-dark: #414141;
-            --th-background: #fff;
+            --th-bg: #fff;
             --th-color: #000;
+            --th-footer-bg: #f5f5f5;
+            --th-footer-color: #000;
+      }
+      .color-primary {
+            color: var(--th-primary)
       }
       * {
             margin: 0;
@@ -23,18 +29,18 @@
             transition: all .25s ease;
       }
       body {
-            background-color: var(--th-background);
+            background-color: var(--th-bg);
             color: var(--th-color);
-            font-family: sans-serif;
+            font-family: "Noto Sans Display", sans-serif;
       }
       /* Object Styling */
-      a {
+      header a {
             color: inherit;
             padding: 10px 2.5px;
             position: relative;
             text-decoration: none;
       }
-      a::after {
+      header a::after {
             background: var(--th-primary);
             bottom: 0;
             content: "";
@@ -43,6 +49,9 @@
             position: absolute;
             width: 100%;
             transition: all .25s ease;
+      }
+      h1, h2, h3, h4, h5, h6 {
+            font-family: "Montserrat", sans-serif;
       }
       /* Header Styling */
       .header-wrapper {
@@ -75,25 +84,222 @@
       .ui-nav ul li:last-child {
             padding-right: 0;
       }
+      /* Main Styling */
+      section {
+          padding: 4rem 0;
+      }
+      .headline-wrapper {
+            display: flex;
+            position: relative;
+            font-family: "Montserrat", sans-serif;
+            justify-content: center;
+      }
+      .subheader {
+            display: flex;
+            font-family: "Montserrat", sans-serif;
+            justify-content: center;
+            letter-spacing: 5px;
+            font-size: 20px;
+      }
+      .acronym-big > span {
+            font-size: 24vw;
+            font-weight: 800;
+      }
+      .vertical {
+          font-size: 5vw;
+          transform: rotate(-90deg) translateX(-68.5%) translateY(0%);
+      }
+      .students-wrapper {
+          padding: 4rem;
+      }
+      .students-wrapper:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+      .student {
+          display: flex;
+          width: 25%;
+          justify-content: center;
+          font-family: "Noto Serif Display", serif;
+          font-weight: 500;
+          font-size: 1.5rem;
+          float: left;
+          margin: 2rem 0;
+      }
+      .student > a {
+          color: #000;
+          text-decoration: none!important;
+      }
+      .student > a:hover {
+          color: var(--th-secondary);
+          margin-top: -5px;
+          margin-bottom: 5px;
+      }
+      /* Animation */
+      .anim-fade {
+          animation: fade 2.5s ease;
+      }
+      .anim-sright {
+          animation: sright .5s ease;
+      }
+      @keyframes fade {
+          0% {
+              opacity: 0;
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+      @keyframes sright {
+          0% {
+              margin-left: -25%;
+          }
+          100% {
+              margin-left: 0%;
+          }
+      }
+      @media screen and (max-width: 960px) {
+          .student {
+              width: 33.33%!important;
+          }
+      }
+      @media screen and (max-width: 720px) {
+          .student {
+              width: 50%!important;
+          }
+      }
   </style>
   <body>
     <header>
         <div class="header-wrapper">
-            <h1>NEWTON</h1>
+            <h1 class="anim-sright">NEWTON</h1>
             <nav class="ui-nav">
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <a href="">Home</a>
                     </li>
                     <li>
-                        <a href="#">Students</a>
+                        <a href="students.html">Students</a>
                     </li>
                     <li>
-                        <a href="#">Gallery</a>
+                        <a href="gallery.html">Gallery</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+    <main>
+        <section class="anim-fade">
+            <div class="subheader">
+                <small>WE ARE</small>
+            </div>
+            <div class="headline-wrapper">
+                <div class="acronym-big">
+                    <span>S</span>
+                    <span>S</span>
+                    <span>C</span>
+                </div>
+                <div>
+                    <aside class="vertical">BATCH</aside>
+                </div>
+                <div class="acronym-big color-primary">
+                    <span>2</span>
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="subheader">
+                <small>SINCE 2018</small>
+            </div>
+        </section>
+        <section>
+            <div class="students-wrapper">
+                <div class="student">
+                    <a href="students.html#adolacion">Yasha</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#amacio">Juliana</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#barcelona">Ilon</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#basug">Ianah</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#bautista">James</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#bibanco">Zaiden</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#bidaure">Princess</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#caigoy">Faivin</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#carrera">Christina</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#delfin">Belle</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#deocares">John</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#frange">Cezar</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#gamboa">Ryce</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#genanda">Clark</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#guaro">Rosie</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#guillem">Cassie</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#hermosura">Moses</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#jamore">Kyla</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#lacurom">Elyka</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#lañada">Glyza</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#lopez">Shifra</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#magbanua">Clyde</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#moises">Sean</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#nogollos">Michelle</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#palmes">Khryztel</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#pastolero">Zedric</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#sayat">Julien</a>
+                </div>
+                <div class="student">
+                    <a href="students.html#tan">Therese</a>
+                </div>
+            </div>
+        </section>
+    </main>
   </body>
 </html>
