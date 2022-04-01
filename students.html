@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- Site by Clyde Magbanua -->
+    <!-- Co-created by Cezar Frange -->
+    <!-- For enquiries or concerns, email hello@clydemagbanua.co -->
+    <!-- Date Published: XXXX.XX.XX -->
+    <title>Students | NEWTON Website Collection</title>
+  </head>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+      :root {
+            --th-primary: #f5bd1e;
+            --th-secondary: #555;
+            --th-dark: #414141;
+            --th-bg: #fff;
+            --th-color: #000;
+            --th-footer-bg: #f5f5f5;
+            --th-footer-color: #000;
+      }
+      .color-primary {
+            color: var(--th-primary)
+      }
+      * {
+            margin: 0;
+            padding: 0;
+            transition: all .25s ease;
+      }
+      html {
+            scroll-behavior: smooth;
+      }
+      body {
+            background-color: var(--th-bg);
+            color: var(--th-color);
+            font-family: "Noto Sans Display", sans-serif;
+      }
+      /* Object Styling */
+      header a {
+            color: inherit;
+            padding: 10px 2.5px;
+            position: relative;
+            text-decoration: none;
+      }
+      header a::after {
+            background: var(--th-primary);
+            bottom: 0;
+            content: "";
+            height: 1px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            transition: all .25s ease;
+      }
+      h1, h2, h3, h4, h5, h6 {
+            font-family: "Montserrat", sans-serif;
+      }
+      h1 > small {
+            font-size: 75%;
+            font-weight: 800;
+            font-family: "Noto Serif Display", serif;
+      }
+      /* Header Styling */
+      .header-wrapper {
+            align-items: center;
+            border-bottom: 1px solid var(--th-dark);
+            display: flex;
+            flex-direction: row;
+            height: 6.25rem;
+            justify-content: space-between;
+            padding: 0 2rem;
+      }
+      header a::after {
+            height: 0px;
+      }
+      header a:hover:after {
+            height: 5px;
+      }
+      hr {
+          border-bottom: 0px;
+          margin: 0 5rem;
+          border-color: var(--th-dark);
+      }
+      .ui-nav ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+      }
+      .ui-nav ul li {
+            list-style: none;
+            padding: 0 2rem;
+      }
+      .ui-nav ul li:first-child {
+            padding-left: 0;
+      }
+      .ui-nav ul li:last-child {
+            padding-right: 0;
+      }
+      /* Main Styling */
+      section {
+          padding: 4rem 5rem;
+      }
+      .headline-wrapper {
+            display: flex;
+            position: relative;
+            font-family: "Montserrat", sans-serif;
+            justify-content: flex-end;
+      }
+      .subheader {
+            display: flex;
+            font-family: "Montserrat", sans-serif;
+            justify-content: flex-end;
+            letter-spacing: 5px;
+            font-size: 20px;
+      }
+      .acronym-big {
+          margin-bottom: -10%;
+      }
+      .acronym-big > span {
+            font-size: 24vw;
+            font-weight: 800;
+      }
+      .vertical {
+          font-size: 5vw;
+          transform: rotate(-90deg) translateX(-68.5%) translateY(0%);
+      }
+      .link-wrapper {
+          padding: 2rem 4rem;
+          padding-right: 2rem;
+          position: sticky;
+          top: 2rem;
+          border-right: 1px solid var(--th-dark);
+      }
+      .link-wrapper:after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+      .sidebar {
+          width: 40%;
+      }
+      .content {
+          padding-left: 2rem;
+          width: 60%;
+      }
+      .link {
+          display: flex;
+          width: 25%;
+          justify-content: center;
+          font-family: "Noto Serif Display", serif;
+          font-weight: 500;
+          font-size: 1.5rem;
+          float: left;
+          margin: 1rem 0;
+      }
+      .link > a {
+          color: #000;
+          text-decoration: none;
+      }
+      .link > a:hover {
+          text-decoration: underline;
+      }
+      .content h1 {
+          padding-bottom: .25rem;
+      }
+      .content-wrapper {
+          display: flex;
+      }
+      .classi:first-child > div:first-child {
+          margin-top: 0;
+      }
+      .classi:last-child > div:last-child {
+          margin-bottom: 0;
+      }
+      .classi > div {
+          margin: 3rem 0;
+          margin-top: 2rem;
+          margin-bottom: 3rem;
+      }
+      /* Animation */
+      .anim-fade {
+          animation: fade 2.5s ease;
+      }
+      .anim-sright {
+          animation: sright .5s ease;
+      }
+      .view-a {
+          display: block;
+          margin-top: 1rem;
+          color: #000;
+          text-decoration: none;
+          transition: all 0s;
+      }
+      .view-a:hover {
+          text-decoration: underline;
+          color: var(--th-primary);
+      }
+      .view-a > svg {
+          transition: all .25s ease;
+          margin-left: .25rem;
+      }
+      .view-a:hover > svg {
+          margin-left: .5rem;
+      }
+      @keyframes fade {
+          0% {
+              opacity: 0;
+          }
+          100% {
+              opacity: 1;
+          }
+      }
+      @keyframes sright {
+          0% {
+              margin-left: -25%;
+          }
+          100% {
+              margin-left: 0%;
+          }
+      }
+      @media screen and (max-width: 960px) {
+          .link {
+              width: 33.33%!important;
+          }
+      }
+      @media screen and (max-width: 720px) {
+          .link {
+              width: 50%!important;
+          }
+          .link-wrapper {
+            padding: 1rem;
+          }
+          hr {
+              margin: 0 2rem;
+          }
+          section {
+              padding: 2rem 3rem!important;
+          }
+      }
+  </style>
+  <body>
+    <header>
+        <div class="header-wrapper">
+            <h1 class="anim-sright">NEWTON</h1>
+            <nav class="ui-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Students</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="anim-fade">
+            <div class="headline-wrapper">
+                <div>
+                    <aside class="vertical">STUDENTS</aside>
+                </div>
+                <div class="acronym-big color-primary">
+                    <span>2</span>
+                    <span>0</span>
+                    <br>
+                    <span style="top: -20%;position: relative;">2</span>
+                    <span style="top: -20%;position: relative;">2</span>
+                </div>
+            </div>
+            <div class="subheader">
+                <small>KNOW THEM</small>
+            </div>
+        </section>
+        <hr>
+        <section>
+            <div class="content-wrapper">
+                <div class="sidebar">
+                    <div class="link-wrapper">
+                        <div class="link">
+                            <a href="#A">A</a>
+                        </div>
+                        <div class="link">
+                            <a href="#B">B</a>
+                        </div>
+                        <div class="link">
+                            <a href="#C">C</a>
+                        </div>
+                        <div class="link">
+                            <a href="#D">D</a>
+                        </div>
+                        <div class="link">
+                            <a href="#F">F</a>
+                        </div>
+                        <div class="link">
+                            <a href="#G">G</a>
+                        </div>
+                        <div class="link">
+                            <a href="#H">H</a>
+                        </div>
+                        <div class="link">
+                            <a href="#J">J</a>
+                        </div>
+                        <div class="link">
+                            <a href="#L">L</a>
+                        </div>
+                        <div class="link">
+                            <a href="#M">M</a>
+                        </div>
+                        <div class="link">
+                            <a href="#N">N</a>
+                        </div>
+                        <div class="link">
+                            <a href="#P">P</a>
+                        </div>
+                        <div class="link">
+                            <a href="#S">S</a>
+                        </div>
+                        <div class="link">
+                            <a href="#T">T</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="classi" id="A">
+                        <div id="adolacion">
+                            <h1>
+                                Yasha
+                                <small>ADOLACION</small>
+                            </h1>
+                            <p>I am </p>
+                            <a href="students/adolacion/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="amacio">
+                            <h1>
+                                Juliana
+                                <small>AMACIO</small>
+                            </h1>
+                            <p>I love to spend my time reading books, watching movies and K-dramas, and listening to music.</p>
+                            <a href="students/amacio/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="B">
+                        <div id="barcelona">
+                            <h1>
+                                Psyc
+                                <small>BARCELONA</small>
+                            </h1>
+                            <p>I spend my time studying cryptocurrency, reading manga and manhwa, and playing online games.</p>
+                            <a href="students/barcelona/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="basug">
+                            <h1>
+                                Yana
+                                <small>BASUG</small>
+                            </h1>
+                            <p>My name is Ianah but you can call me yours.</p>
+                            <a href="students/basug/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="bautista">
+                            <h1>
+                                AJJM
+                                <small>BAUTISTA</small>
+                            </h1>
+                            <p>I love playing VALORANT, and please give me food when you meet me.</p>
+                            <a href="students/bautista/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="bibanco">
+                            <h1>
+                                Zaid
+                                <small>BIBANCO</small>
+                            </h1>
+                            <p>I like gaming, sleeping, and listening to music.</p>
+                            <a href="students/bibanco/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="bidaure">
+                            <h1>
+                                Cessa
+                                <small>BIDAURE</small>
+                            </h1>
+                            <p>I'm currently escaping through a good story.</p>
+                            <a href="students/bidaure/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="C">
+                        <div id="caigoy">
+                            <h1>
+                                Faiv
+                                <small>CAIGOY</small>
+                            </h1>
+                            <p>For me, to write is to breathe.</p>
+                            <a href="students/caigoy/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="carrera">
+                            <h1>
+                                Tintin
+                                <small>CARRERA</small>
+                            </h1>
+                            <p>I'm an artist whose work of art is my life.</p>
+                            <a href="students/carrera/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="D">
+                        <div id="delfin">
+                            <h1>
+                                Belle
+                                <small>DELFIN</small>
+                            </h1>
+                            <p>I am a strict leader who loves to participate in plays and to dance.</p>
+                            <a href="students/delfin/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="deocares">
+                            <h1>
+                                Intellectual Pupil
+                                <small>DEOCARES</small>
+                            </h1>
+                            <p>I love listening to alternative R&B and hip-hop/rap.</p>
+                            <a href="students/deocares/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="F">
+                        <div id="frange">
+                            <h1>
+                                Sisar
+                                <small>FRANGE</small>
+                            </h1>
+                            <p>Reading novels is my way of passing time.</p>
+                            <a href="students/frange/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="G">
+                        <div id="gamboa">
+                            <h1>
+                                Xerunze
+                                <small>GAMBOA</small>
+                            </h1>
+                            <p>I love reading manhwa, manhua, and manga.</p>
+                            <a href="students/gamboa/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="genanda">
+                            <h1>
+                                Bruno Earth
+                                <small>GENANDA</small>
+                            </h1>
+                            <p>My hobbies are biking, singing, practicing with my guitar, song writing, and listening to music.</p>
+                            <a href="students/genanda/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="guaro">
+                            <h1>
+                                Rosie
+                                <small>GUARO</small>
+                            </h1>
+                            <p>I have an easygoing personality and loves the color yellow.</p>
+                            <a href="students/guaro/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="guillem">
+                            <h1>
+                                Cassie
+                                <small>GUILLEM</small>
+                            </h1>
+                            <p>I have never ever been happier.</p>
+                            <a href="students/guillem/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="H">
+                        <div id="hermosura">
+                            <h1>
+                                Mos
+                                <small>HERMOSURA</small>
+                            </h1>
+                            <p>I am an average guy doing average things with average results.</p>
+                            <a href="students/hermosura/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="J">
+                        <div id="jamore">
+                            <h1>
+                                Kayluh
+                                <small>JAMORE</small>
+                            </h1>
+                            <p>I  am the main character of my own drama.</p>
+                            <a href="students/jamore/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="L">
+                        <div id="lañada">
+                            <h1>
+                                Lychie
+                                <small>LACUROM</small>
+                            </h1>
+                            <p>I'm female, five-foot-three, sixteen, and addicted to caffeine.</p>
+                            <a href="students/lacurom/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="lañada">
+                            <h1>
+                                Mama G
+                                <small>LAÑADA</small>
+                            </h1>
+                            <p>The only thing I am consistent with is inconsistency.</p>
+                            <a href="students/lañada/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="lopez">
+                            <h1>
+                                Ship
+                                <small>LOPEZ</small>
+                            </h1>
+                            <p>I am blessed and ever thankful for everything God has given me.</p>
+                            <a href="students/lopez/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="M">
+                        <div id="magbanua">
+                            <h1>
+                                Clyde
+                                <small>MAGBANUA</small>
+                            </h1>
+                            <p></p>
+                            <a href="students/magbanua/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="moises">
+                            <h1>
+                                Ciano
+                                <small>MOISES</small>
+                            </h1>
+                            <p>I eat and sleep on a daily basis.</p>
+                            <a href="students/moises/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="N">
+                        <div id="nogollos">
+                            <h1>
+                                Mich
+                                <small>NOGOLLOS</small>
+                            </h1>
+                            <p>I love peace and serenity, and nature fascinates me.</p>
+                            <a href="students/nogollos/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="P">
+                        <div id="palmes">
+                            <h1>
+                                Sam
+                                <small>PALMES</small>
+                            </h1>
+                            <p>I like to dance</p>
+                            <a href="students/palmes/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                        <div id="pastolero">
+                            <h1>
+                                Mamang
+                                <small>PASTOLERO</small>
+                            </h1>
+                            <p>I am an ambitious and kind person, and also love to collect photocards from K-pop albums.</p>
+                            <a href="students/pastolero/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="S">
+                        <div id="sayat">
+                            <h1>
+                                Jules
+                                <small>SAYAT</small>
+                            </h1>
+                            <p>Everytime I feel good, I know it won't last.</p>
+                            <a href="students/sayat/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <div class="classi" id="T">
+                        <div id="tan">
+                            <h1>
+                                Teris
+                                <small>TAN</small>
+                            </h1>
+                            <p>I am a creative and artistic individual whose world revolves around music, art, and K-pop, and also someone who prefers to sleep during the day and stay up during the night.</p>
+                            <a href="students/tan/index.html" class="view-a">Visit my website<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+  <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+  </body>
+</html>
